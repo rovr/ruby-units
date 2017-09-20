@@ -35,8 +35,8 @@ module RubyUnits
     UNITY_ARRAY        = [UNITY].freeze
     # ideally we would like to generate this regex from the alias for a 'feet' and 'inches', but they aren't
     # defined at the point in the code where we need this regex.
-    FEET_INCH_UNITS_REGEX = /(?:'|ft|feet)\s*(\d+)\s*(?:"|in|inch(?:es)?)/
-    FEET_INCH_REGEX    = /(\d+)\s*#{FEET_INCH_UNITS_REGEX}/
+    FEET_INCH_UNITS_REGEX = /(?:'|ft|feet)\s*(\d+\.?\d*)\s*(?:"|in|inch(?:es)?)/
+    FEET_INCH_REGEX    = /(\d+\.?\d*)\s*#{FEET_INCH_UNITS_REGEX}/
     # ideally we would like to generate this regex from the alias for a 'pound' and 'ounce', but they aren't
     # defined at the point in the code where we need this regex.
     LBS_OZ_UNIT_REGEX  = /(?:#|lbs?|pounds?|pound-mass)+[\s,]*(\d+)\s*(?:ozs?|ounces?)/
